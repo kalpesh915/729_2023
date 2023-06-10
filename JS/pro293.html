@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    // JSON Data to Java Script Object
+
+    const jsonData = '{"students" : [{"roll" : 1, "fname" : "Aditya", "lname" : "Jadeja", "city":"Rajkot"},{"roll" : 2, "fname" : "Neel", "lname" : "Khanpariya", "city":"Rajkot"}]}';
+
+    document.write(jsonData);
+    document.write("<hr>");
+    const jsObject = JSON.parse(jsonData);
+    document.write(jsObject.students[0].fname);
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="op">Click Button to get Date</h1>
+    <hr>
+    Select Font Size :
+    <select onchange="changeFontSize(this.value)">
+        <option>5</option>
+        <option>10</option>
+        <option>15</option>
+        <option>20</option>
+        <option>25</option>
+        <option>30</option>
+        <option>35</option>
+        <option>40</option>
+        <option>45</option>
+        <option>50</option>
+    </select>
+</body>
+</html>
+
+<script>
+    function changeFontSize(size){
+        document.getElementById("op").style.fontSize = size+"px";
+    }
+</script>

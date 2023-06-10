@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <select onchange="changebgColor(this.value)">
+        <option>Red</option>
+        <option>Green</option>
+        <option>Blue</option>
+        <option>Cyan</option>
+        <option>Purple</option>
+        <option>Pink</option>
+        <option>Brown</option>
+        <option>Maroon</option>
+        <option>Yellow</option>
+        <option>Gray</option>
+    </select>
+</body>
+</html>
+
+<script>
+    function changebgColor(color){
+        //alert(color);
+        document.body.style.backgroundColor = color;
+    }
+</script>

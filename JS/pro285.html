@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    try{
+        // try block is used to check code for errors
+        let x = 10;
+        x = x.toUpperCase(); // not possible
+    }catch(error){
+        // catch block is used to recive errors and print it
+        document.write("<hr> Error is : "+error);
+        document.write("<hr> Name is : "+error.name);
+        document.write("<hr> Message is : "+error.message);
+    }finally{
+        // finally block must be exectude if error is thrown or not
+    }
+</script>

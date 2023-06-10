@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeyup="checkAge(this.value)" placeholder="Enter Your Age">
+    <hr>
+    <h1 id="op">Enter Your Age</h1>
+</body>
+</html>
+
+<script>
+    let op = document.getElementById("op");
+
+    function checkAge(age){
+        
+        try{
+            if(age == ""){
+                throw "Enter Your Age";
+            }else if(isNaN(age)){
+                throw "Invalid Age";
+            }else{
+                age = parseInt(age);
+
+                if(age >= 18){
+                    throw "Valid Age for Voting";
+                }else if(age >= 15){
+                    throw "Please try in next Election";
+                }else{
+                    throw "Too much young for Voting";
+                }
+            }
+        }catch(error){
+            op.innerHTML = error;
+        }
+    }
+</script>

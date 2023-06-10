@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function Student(roll, fname, lname, email, phone, city){
+        this.roll = roll;
+        this.fname = fname;
+        this.lname = lname;
+        this.email = email;
+        this.phone = phone;
+        this.city = city;
+        this.getdata = function(){
+            return "<hr>Welcome "+this.fname+" "+this.lname+" to "+this.city+" Your ROll No. is "+this.roll;
+        }
+    }
+
+
+    Student.prototype.nationality = "Indian";
+    let obj1 = new Student(111, "Neel", "Kanpariya", "neel@gmail.com", "9898989898", "Rajkot");
+    document.write("<hr>"+JSON.stringify(obj1));
+    document.write(obj1.nationality);
+    let obj2 = new Student(111, "ALpesh", "Kanani", "alpesh@gmail.com", "9898989898", "Rajkot");
+    document.write("<hr>"+JSON.stringify(obj2));
+    document.write(obj2.nationality);
+
+</script>

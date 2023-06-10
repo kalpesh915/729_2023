@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    class Math1{
+        sum(x, y) {
+            return x + y;
+        }
+
+        sub(x, y) {
+            return x - y;
+        }
+    }
+
+    class Math2{
+        mul(x, y) {
+            return x * y;
+        }
+
+        div(x, y) {
+            return x / y;
+        }
+    }
+
+    const obj1 = new Math1();
+    document.write("<hr>" + obj1.sum(111, 11));
+    document.write("<hr>" + obj1.sub(111, 11));
+
+    const obj2 = new Math2();
+    document.write("<hr>" + obj2.mul(111, 11));
+    document.write("<hr>" + obj2.div(111, 11));
+
+</script>

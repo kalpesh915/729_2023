@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    class Math1{        // 2 functions
+        sum(x, y) {
+            return x + y;
+        }
+
+        sub(x, y) {
+            return x - y;
+        }
+    }
+
+    class Math2 extends Math1{ // 2 functions + 2 Function Math1
+        mul(x, y) {
+            return x * y;
+        }
+
+        div(x, y) {
+            return x / y;
+        }
+    }
+
+    class Math3 extends Math2{ // // 1 functions + 4 function Math2
+        mod(x, y) {
+            return x % y;
+        }
+    }
+
+    let obj3 = new Math3();
+    
+    document.write("<hr>" + obj3.sum(111, 11));
+    document.write("<hr>" + obj3.sub(111, 11));
+    document.write("<hr>" + obj3.mul(111, 11));
+    document.write("<hr>" + obj3.div(111, 11));
+    document.write("<hr>" + obj3.mod(111, 11));
+</script>

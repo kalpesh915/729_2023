@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // JS in Head Section
+    </script>
+</head>
+<body>
+    <input type="color" onchange="changebgColor(this.value)">
+    <script>
+        // JS in Body Section
+    </script>
+</body>
+</html>
+
+<script>
+
+    /// prefrable to write js code in outside of body tag or at end of the code
+    function changebgColor(color){
+        //alert(color);
+        document.body.style.backgroundColor = color;
+    }
+</script>

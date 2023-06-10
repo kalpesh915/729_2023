@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    const data = {
+        count : 0
+    };
+
+    Object.defineProperty(data, "reset", {
+        get : function(){
+            this.count = 0;
+        }
+    });
+
+    Object.defineProperty(data, "increment", {
+        get : function(){
+            this.count++;
+        }
+    });
+
+    Object.defineProperty(data, "decrement", {
+        get : function(){
+            this.count--;
+        }
+    });
+
+    Object.defineProperty(data, "add", {
+        set : function(value){
+            this.count += value;
+        }
+    });
+
+    Object.defineProperty(data, "minus", {
+        set : function(value){
+            this.count -= value;
+        }
+    });
+
+
+    document.write("<hr>"+data.count);
+    data.increment;
+    data.increment;
+    data.increment;
+    data.increment;
+    document.write("<hr>"+data.count);
+    data.decrement;
+    document.write("<hr>"+data.count);
+    data.add = 10;
+    document.write("<hr>"+data.count);
+    data.minus = 5;
+    document.write("<hr>"+data.count);
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    const student = {
+        roll : 123,
+        fname : "Neel",
+        lname : "Khanpariya"
+    }
+
+    document.write("<hr> Old Propery is <hr>");
+    for(let x in student){
+        //document.write("<hr>"+x);
+        document.write(" " +x+" is "+student[x]);
+    }
+
+    student.city = "Rajkot";
+    document.write("<hr> New Propery is <hr>");
+    for(let x in student){
+        //document.write("<hr>"+x);
+        document.write(" " +x+" is "+student[x]);
+    }
+
+    delete student.roll;
+    document.write("<hr> Deleted Propery is <hr>");
+    for(let x in student){
+        //document.write("<hr>"+x);
+        document.write(" " +x+" is "+student[x]);
+    }
+</script>

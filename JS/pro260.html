@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let students = new Map([
+        [1, "Neel"],
+        [2, "Alpesh"],
+        [3, "Krushal"],
+        [4, "Aditya"],
+        [5, "Bharti"],
+        [6, "Rachna"]
+    ]);
+    document.write("<hr>"+students.size);
+    students.set([7, "Kalpesh"]);
+    document.write("<hr>"+students.size);
+    document.write("<hr>"+students.get(2));
+    document.write("<hr>"+students.has(2));
+    students.delete(2);
+    document.write("<hr>"+students.has(2));
+</script>

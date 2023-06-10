@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    class Student{
+        constructor(roll, fname, lname){
+            this.roll = roll;
+            this.fname = fname;
+            this.lname = lname;
+        }
+
+        getData(){
+            let date = new Date();
+            return "<hr>Welcome "+this.fname+" "+this.lname+" Your Roll No. is "+this.roll+" Today is "+date;
+        }
+    }
+
+    let Student1 = new Student(111, "neel", "kanpariya");
+    document.write(Student1.getData());
+    let Student2 = new Student(111, "Alpesh", "kanani");
+    document.write(Student2.getData());
+</script>

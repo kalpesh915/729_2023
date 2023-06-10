@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    const marks = [11, 22, 33, 11, 4, 12, 45, 11, 34, 1011, 1330, 22, 5];
+    document.write("<hr>"+marks);
+    document.write("<hr>"+marks.sort());
+    document.write("<hr>"+marks.sort(function(x, y){return x - y}));
+    /* 
+        function(x , y) used for sorting of two numbers
+        x == y both are same no sorting
+        x > y then x is placed after y ( 22, 11 )   22
+        x < y then y is placed after x ( 22, 11 )   11
+    */ 
+</script>

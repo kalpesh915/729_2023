@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let x = 10;
+
+    document.write("<hr> x before function is "+x); // 10
+    
+    //  Passed by Value
+    function add10(x){ // x is local for add10() x is delete after function completed
+        x += 10; // add 10 to x
+        document.write("<hr> x in function "+x); // 20
+    }
+
+    add10(x);
+    document.write("<hr> x after function is "+x); // 10
+</script>

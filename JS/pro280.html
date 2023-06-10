@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function division(i, j){
+        if(isNaN(i)){
+            throw "First value is Not a Number";
+        }else if(isNaN(j)){
+            throw "Second value is Not a Number";
+        }else if(j == 0){
+            throw "Division is not possible by zero";
+        }else{
+            document.write("Division is "+( i / j));
+        }
+    }
+
+    
+
+    try{
+        let x = Number(prompt("Enter value for x"));
+        let y = Number(prompt("Enter value for y"));
+        division(x, y);
+    }catch(error){
+        document.write("<hr> Error is "+error);
+    }
+    
+</script>

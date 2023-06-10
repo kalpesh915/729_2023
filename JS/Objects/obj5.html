@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    const student = {
+        roll : 123,
+        fname : "Neel",
+        lname : "Khanpariya",
+        getdata : function(){
+            return this.fname+" "+this.lname;
+        }
+    }
+
+    document.write("<hr>"+student.getdata());
+    student1 = student;
+    document.write("<hr>"+student1.getdata());
+    student1.fname = "NEEL";
+    document.write("<hr>"+student1.getdata());
+    document.write("<hr>"+student.getdata());
+</script>
