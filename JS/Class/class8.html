@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    class Student{
+        constructor(roll, fname, lname){
+            this.roll = roll;
+            this.fname = fname;
+            this.lname = lname;
+        }
+
+        set _fname(fname){
+            this.fname = fname;
+        }
+
+        get _fname(){
+            return this.fname;
+        }
+
+        set _lname(lname){
+            this.fname = lname;
+        }
+
+        get _lname(){
+            return this.lname;
+        }
+    }
+
+    let obj1 = new Student(111, "Neel", "Kanpariy");
+    document.write("<hr>"+obj1._fname); // getter
+    obj1._fname = "NEEL";               // setter
+    document.write("<hr>"+obj1._fname);
+</script>
