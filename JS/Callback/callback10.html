@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="op"></div>
+</body>
+</html>
+
+<script>
+
+    // producing code
+    const fileLoadPromise = new Promise(function(resolve, reject){
+        // ajax code
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.open('GET', "data.txt");
+        xmlhttp.onload = function(){
+            // 200 status = data received
+            if(xmlhttp.status == 200){
+                resolve(xmlhttp.responseText);
+            }else{
+                reject("File not found");
+            }
+        }
+        xmlhttp.send();
+    });    
+
+
+    // consuming code
+    fileLoadPromise.then(function(success){
+        printer(success);
+    }, function(error){
+        printer(error);
+    });
+
+    // printer function
+    function printer(text){
+        document.getElementById("op").innerHTML = text;
+    }
+</script>
