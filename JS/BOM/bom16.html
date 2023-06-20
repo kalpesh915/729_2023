@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="op">Today is</h1>
+</body>
+</html>
+
+<script>
+    const op = document.getElementById("op");
+    function getDate(){
+        //document.getElementById("op").innerHTML = Date();
+        let Today = new Date();
+        let opText = Today.getHours()+" : "+Today.getMinutes()+" : "+Today.getSeconds();
+        op.innerHTML = opText;
+
+        if(Today.getSeconds() %2 == 0){
+            op.style.color = "Red";
+        }else{
+            op.style.color = "Blue";
+        }
+    }
+
+    /*
+        time Interval is used to set break of some seconds between code execution
+    */
+
+    // this code call getDate function after every seconds
+   setInterval(getDate, 1000);
+</script>

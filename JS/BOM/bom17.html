@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="op">Start Counter</h1>
+    <hr>
+    <button onclick="startTimer()">Start Timer</button>
+    <button onclick="stopTimer()">Stop Timer</button>
+</body>
+</html>
+
+<script>
+    const op = document.getElementById("op");
+    let animation = null;
+    let count = 0;
+
+    function startTimer(){
+        if(animation === null){
+            animation = setInterval(incrementCount, 100);
+        }
+    }
+
+    function incrementCount(){
+        count++;
+        op.innerHTML = count;
+    }
+
+    function stopTimer(){
+        if(animation !== null){
+            clearInterval(animation); // stop animation
+            animation = null;
+        }
+    }
+</script>
