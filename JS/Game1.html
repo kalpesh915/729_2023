@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 620px;
+            height: 620px;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        .inner{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body onload="init()">
+    <div class="outer">
+        <div class="inner" id="1" onclick="makeMove(this.id)"></div>
+        <div class="inner" id="2" onclick="makeMove(this.id)"></div>
+        <div class="inner" id="3" onclick="makeMove(this.id)"></div>
+        <div class="inner" id="4" onclick="makeMove(this.id)"></div>
+        <div class="inner" id="5" onclick="makeMove(this.id)"></div>
+        <div class="inner" id="6" onclick="makeMove(this.id)"></div>
+        <div class="inner" id="7" onclick="makeMove(this.id)"></div>
+        <div class="inner" id="8" onclick="makeMove(this.id)"></div>
+        <div class="inner" id="9" onclick="makeMove(this.id)"></div>
+    </div>
+    <hr>
+        <h1 id="op"></h1>
+    <hr>
+</body>
+</html>
+
+<script>
+    // declare required arrays
+    let divisions = [];
+    let position = [];
+    let player, count = 0;
+    const possiblity = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[3,5,7]];
+    const op = document.getElementById("op");
+    function init(){
+        //alert("Called");
+
+        // get all divisions in array and set positions to empty
+        for(let i = 1; i <= 9; i++ ){
+            divisions[i] = document.getElementById(i);
+            position[i] = "";
+        }
+
+        // set move for player 1
+        player = 1;
+    }
+
+    function makeMove(id){
+        //alert(id);
+        if(position[id] == ""){
+            if(player == 1){
+                divisions[id].style.backgroundColor = "red";
+                position[id] = "X";
+                count++;
+                player = 2;
+            }else{
+                divisions[id].style.backgroundColor = "yellow";
+                position[id] = "O";
+                count++;
+                player = 1;
+            }
+            op.innerHTML = position;
+        }else{
+            alert("Invalid Move");
+        }
+        
+        if(count >= 5){
+            checkWinner();
+        }
+    }
+
+    function checkWinner(){
+        //alert("Called");
+        for(let i=0; i<8; i++){
+            if(position[possiblity[i][0]] == "X" && position[possiblity[i][1]] == "X" && position[possiblity[i][2]] == "X"){
+                alert("Player 1 is Winner");
+                resetGame();
+            }else if(position[possiblity[i][0]] == "O" && position[possiblity[i][1]] == "O" && position[possiblity[i][2]] == "O"){
+                alert("Player 2 is Winner");
+                resetGame();
+            }
+        }
+
+        if(position.indexOf("") < 0){
+            alert("Game Draw");
+            resetGame();
+        }
+    }
+
+    function resetGame(){
+        if(confirm("Do you want to play again ?")){
+            window.location.reload();
+        }else{
+            alert("Thanks for Playing");
+        }
+    }
+</script>
