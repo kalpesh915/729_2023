@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="op"></h1>
+    <button onclick="displayAll()">Display All Cookies</button>
+    <button onclick="create1()">Create Cookie 1</button>
+    <button onclick="create2()">Create Cookie 2</button>
+    <button onclick="delete1()">Delete Cookie 1</button>
+    <button onclick="delete2()">Delete Cookie 2</button>
+</body>
+</html>
+
+<script>
+    let op = document.getElementById("op");
+
+    function displayAll(){
+        op.innerHTML = document.cookie;
+    }
+
+    function create1(){
+        document.cookie = "username=neel; expires = 15 dec 2023 10:10:10 UTC;";
+        displayAll();
+    }
+
+    function create2(){
+        document.cookie = "city=Rajkot; expires = 15 dec 2023 10:10:10 UTC;";
+        displayAll();
+    }
+
+    function delete1(){
+        document.cookie = "username=neel; expires = 15 dec 2013 10:10:10 UTC;";
+        displayAll();
+    }
+
+    function delete2(){
+        document.cookie = "city=Rajkot; expires = 15 dec 2013 10:10:10 UTC;";
+        displayAll();
+    }
+</script>
