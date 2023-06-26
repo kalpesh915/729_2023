@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Never use Document write afetr complete loading of your page</h1>
+    <button onclick="show()">click me</button>
+</body>
+</html>
+
+<script>
+    function show(){
+        document.write("Today is "+new Date());
+    }
+</script>

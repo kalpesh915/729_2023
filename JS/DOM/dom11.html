@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="get" id="form1" name="form1">
+        <input type="text" name="age" id="age">
+        <input type="button" onclick="validate()" value="Click Me">
+    </form>
+</body>
+</html>
+
+<script>
+    // check age is valid or not if valid age then go for form submit and if invalid then present and error message to user
+    function validate(){
+        let age = document.forms["form1"]["age"].value;
+        //alert(age);
+        if(isNaN(age)){
+            alert("Invalid Age");
+        }else{
+            age = Number(age);
+
+            if(age >= 18){
+                document.forms["form1"].submit();
+            }else{
+                alert("Too Much Youg for Voting");
+            }
+        }
+    }
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1" id="f1">
+        <input type="text" name="fname" id="fname" value="Jadeja">
+        <input type="text" name="lname" id="lname" value="Aditya">
+    </form>
+</body>
+</html>
+
+<script>
+    let myForm = document.forms["f1"];
+
+    for(let i = 0; i<myForm.length; i++){
+        document.write("<hr> Type is : "+myForm[i].type+" Name is : "+myForm[i].name+" Value is "+myForm[i].value);
+    }
+</script>
