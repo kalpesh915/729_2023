@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        <h1 id="myH1">Welcome</h1>
+    </div>
+</body>
+</html>
+
+<script>
+    const myDiv = document.getElementById("myDiv");
+    const myH1 = document.getElementById("myH1");
+
+    myDiv.addEventListener("click", function(){
+        alert("Clicked on Division Tag");
+    }, true);
+
+    myH1.addEventListener("click", function(){
+        alert("Clicked on H1 Tag");
+    }, true); 
+
+    // true for event capture instend of bubbling
+</script>

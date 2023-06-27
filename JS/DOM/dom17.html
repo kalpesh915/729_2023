@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 50px;
+            width: 200px;
+            background-color: brown;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="manageEvents()" id="op">Click Me</div>
+</body>
+</html>
+
+<script>
+    let count = 0;
+    const op = document.getElementById("op");
+    function manageEvents(){
+        if(count == 0){
+            op.innerHTML = "Click Me Again"
+            count++;
+        }
+        else if(count == 1){
+            op.innerHTML = "Thank You"
+            count++;
+        }
+        else if(count == 2){
+            op.innerHTML = "Good Bye"
+            count++;
+        }
+        else if(count == 3){
+            op.style.display = "none";
+        }
+    }
+</script>
