@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        <p id="myPtag">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni eum hic adipisci error veniam reprehenderit unde dolor ipsam quod quas? Omnis quo corporis expedita recusandae quis sit dolores, amet ut.</p>
+    </div>
+
+    <button onclick="addNewElement()">Add New Element</button>
+    <button onclick="insertBeforePTag()">Add New Element Insert Before P</button>
+    <button onclick="RemoveAnyChild()">Remove P Tag</button>
+    <button onclick="ReplacePTag()">Replace P Tag</button>
+</body>
+</html>
+
+<script>
+    const myDiv = document.getElementById("myDiv");
+    const myPtag = document.getElementById("myPtag");
+
+    function addNewElement(){
+        let newH1tag = document.createElement("h1");
+        let newText = document.createTextNode("Welcome");
+
+        newH1tag.append(newText);
+
+        //myDiv.append(newH1tag);
+        myDiv.appendChild(newH1tag);
+    }
+
+    function insertBeforePTag(){
+        let newH1tag = document.createElement("h1");
+        let newText = document.createTextNode("Welcome");
+
+        newH1tag.append(newText);
+
+        myDiv.insertBefore(newH1tag, myPtag);
+    }
+
+    function RemoveAnyChild(){
+        myDiv.removeChild(myPtag);
+    }
+
+    function ReplacePTag(){
+        let newH1tag = document.createElement("h1");
+        let newText = document.createTextNode("Welcome");
+
+        newH1tag.append(newText);
+
+        myDiv.replaceChild(newH1tag, myPtag);
+    }
+</script>
