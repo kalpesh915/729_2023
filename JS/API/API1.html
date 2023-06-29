@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="op"></p>
+    <button onclick="getLocation()">get location</button>
+</body>
+</html>
+
+<script>
+    function getLocation(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(printer);
+        }else{
+            alert("Permission not Granted");
+        }
+    }
+
+    function printer(location){
+        document.getElementById("op").innerHTML = location.coords.latitude +","+location.coords.longitude;
+    }
+</script>

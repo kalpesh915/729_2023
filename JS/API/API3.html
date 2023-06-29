@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local Storage Example</h1>
+    <hr>
+    <button onclick="setData1()">Set Data 1</button>
+    <button onclick="getData1()">Get Data 1</button>
+    <button onclick="setData2()">Set Data 2</button>
+    <button onclick="getData2()">Get Data 2</button>
+    <button onclick="countData()">Count Data</button>
+    <button onclick="deleteData1()">Delete Data 1</button>
+    <button onclick="deleteData2()">Delete Data 2</button>
+    <button onclick="clearData()">Clear Data</button>
+</body>
+</html>
+
+<script>
+    function setData1(){
+        let fname = prompt("Enter your first name ");
+        localStorage.setItem("fname", fname);
+    }
+
+    function setData2(){
+        let lname = prompt("Enter your first name ");
+        localStorage.setItem("lname", lname);
+    }
+
+    function getData1(){
+        alert(localStorage.getItem("fname"));
+    }
+
+    function getData2(){
+        alert(localStorage.getItem("lname"));
+    }
+
+    function deleteData1(){
+        localStorage.removeItem("fname");
+    }
+
+    function deleteData2(){
+        localStorage.removeItem("lname");
+    }
+
+    function countData(){
+        alert("Total Data is "+localStorage.length);
+    }
+
+    function clearData(){
+        localStorage.clear();
+    }
+</script>
