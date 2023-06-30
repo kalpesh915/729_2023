@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="op"></h1>
+</body>
+</html>
+
+<script>
+    function printer(value){
+        document.getElementById("op").innerHTML = value;
+    }
+
+    async function getDate(){
+        let myPromise = new Promise(function(resolve, reject){
+            setTimeout(function(){
+                resolve(new Date());
+            }, 5000);
+        });
+
+        //document.getElementById("op").innerHTML = myPromise;
+        document.getElementById("op").innerHTML = await myPromise;
+    }
+    
+    getDate();
+</script>
