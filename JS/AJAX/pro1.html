@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, harum! Quae, natus neque officiis repellendus, dolorem quia placeat omnis blanditiis temporibus iure consectetur id reiciendis ea dolor laborum non voluptas?</p>
+    <hr>
+    <div id="op">
+
+    </div>
+
+    <hr>
+    <button onclick="loadData()">Load Data</button>
+</body>
+</html>
+
+<script>
+    function loadData(){
+        // Create an XMLHttpRequest Object
+        const XMLHttp = new XMLHttpRequest();
+
+        // Define a Callback Function
+        XMLHttp.onload = function(){
+            document.getElementById("op").innerHTML = XMLHttp.responseText;
+        }
+
+        // Send a Request
+        XMLHttp.open("GET", "data.txt", true);
+        XMLHttp.send();
+    }
+</script>
